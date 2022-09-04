@@ -16,6 +16,9 @@ function status(bmi){
     else if(document.querySelectorAll("input")[0].value === "0" || document.querySelectorAll("input")[0].value.length === "0"){
         alert("please provide valid data to proceed further");
         }
+    else if (bmi == Infinity) {
+          alert("enter valid data");
+    }
     else if(bmi < 18.5){
       return document.querySelectorAll("h1")[1].innerHTML ="you are in the under weight range", document.querySelectorAll("h1")[0].innerHTML = "your body mass index is "+bmi;
       }
