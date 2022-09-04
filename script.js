@@ -10,7 +10,13 @@ document.querySelectorAll("button")[1].addEventListener("click", function(){
 });
 function status(bmi){
     console.log(bmi);
-    if(bmi < 18.5){
+    if(document.querySelectorAll("input")[0].value.length === 0 || document.querySelectorAll("input")[0].value.length === 0){
+      alert("please provide all field to proceed further");
+      }
+    else if(document.querySelectorAll("input")[0].value === "0" || document.querySelectorAll("input")[0].value.length === "0"){
+        alert("please provide valid data to proceed further");
+        }
+    else if(bmi < 18.5){
       return document.querySelectorAll("h1")[1].innerHTML ="you are in the under weight range", document.querySelectorAll("h1")[0].innerHTML = "your body mass index is "+bmi;
       }
     else if (bmi >= 18.5 && bmi <= 24.9){
